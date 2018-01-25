@@ -38,7 +38,7 @@ class Logon:
 	
 	# use <button> NOT <input> for submit and reet otherwise icons won't show!
 	logon_screen = base_page % '''
-<form class="login" action="%s/logon" method="GET">
+<form class="login" action="%s/logon" method="POST">
 <fieldset>
 <label for="username">Username</label><input id="username" type="text" name="username" />
 <script type="text/javascript">$("#username").focus()</script>
