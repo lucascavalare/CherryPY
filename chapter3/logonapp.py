@@ -20,9 +20,14 @@ class Root(object):
 	def somepage(self):
 		username=logon.checkauth('/logon',returntopage=True)
 		return '<html><body><h1>This is some page.</h1></body></html>'
-		
+	
 if __name__ == "__main__":
-
+	#Adding this to update default output access.
+	cherrypy.config.update({
+                'server.socket_host': '0.0.0.0',
+                'server.socket_port': 8088,
+        })
+	
 	import os.path
 	current_dir = os.path.dirname(os.path.abspath(__file__))
 	
