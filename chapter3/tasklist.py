@@ -19,7 +19,13 @@ class Root(object):
 		return Root.logon.index()
 	
 if __name__ == "__main__":
-
+	
+	#Adding output
+	cherrypy.config.update({
+                'server.socket_host': '0.0.0.0',
+                'server.socket_port': 8088,
+        })
+	
 	cherrypy.quickstart(Root(),config={
 		'/':
 		{ 'log.access_file' : os.path.join(current_dir,"access.log"),
