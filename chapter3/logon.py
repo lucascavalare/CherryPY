@@ -60,6 +60,7 @@ class Logon:
 	@staticmethod
 	def checkpass(username,password):
 		if username=='user' and password=='secret': return True
+		if username=='lucas' and password=='lucas': return True
 		return False
 
 	@cherrypy.expose
