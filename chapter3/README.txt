@@ -4,7 +4,7 @@ The python files marked with an * are actual applications that may be started ei
 
 c:\python32\python.exe application.py
 
-This will start up a CherryPy webserver accessible on http://localhost:8080/ or http://127.0.0.1:8080/
+This will start up a CherryPy webserver accessible on http://localhost:8088/ or http://0.0.0.0:8088/
 
 All applications require the user to authenticate and are preconfigured to accept 'user' and 'secret' (both without the quotes) as valid credentials.
 
