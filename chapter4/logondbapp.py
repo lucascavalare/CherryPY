@@ -21,6 +21,12 @@ class Root(object):
 		username=Root.logon.checkauth('/logon',returntopage=True)
 		return '<html><body><h1>This is some page.</h1></body></html>'
 		
+	#adding the output to host and port
+	cherrypy.config.update({
+                'server.socket_host': '0.0.0.0',
+                'server.socket_port': 8088,
+	})
+
 if __name__ == "__main__":
 
 	import os.path
