@@ -11,8 +11,10 @@ theme = "smoothness"
 
 class Root(object):
 	task = task.Task(logoffpath="/logon/logoff")
-
-	logon = logon.Logon(path="/logon", authenticated="/task", not_authenticated="/")
+	
+	#Serving APP from /task to /apps/task/
+	#logon = logon.Logon(path="/logon", authenticated="/task", not_authenticated="/")
+	logon = logon.Logon(path="/logon", authenticated="/apps/task", not_authenticated="/")
 	
 	@cherrypy.expose
 	def index(self):
