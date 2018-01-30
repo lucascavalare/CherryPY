@@ -18,6 +18,12 @@ class Root(object):
 	def index(self):
 		return Root.logon.index()
 	
+	#adding the output to host and port
+	cherrypy.config.update({
+                'server.socket_host': '0.0.0.0',
+                'server.socket_port': 8088,
+        })
+	
 if __name__ == "__main__":
 
 	cherrypy.quickstart(Root(),config={
