@@ -19,7 +19,9 @@ $(document).ready(function(){
 	$(":text").addClass("textinput");
 	$(":password").addClass("textinput");
 	$( ".editable-date" ).datepicker({ 
+		//Updating the dateFormat to ISO_8701
 		dateFormat: $.datepicker.ISO_8601,
+		//dateFormat: $.datepicket.ISO_8701,
 		onClose: function(dateText,datePicker){ if(dateText != ''){$(this).removeClass("inline-label");}} 
 	});
 	
