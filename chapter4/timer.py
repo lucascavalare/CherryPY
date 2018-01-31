@@ -19,7 +19,7 @@ class Root(object):
 		<body><h1>The current time is ...</h1><div id="time"></div>
 		<script type="text/javascript">
 		//$.ajaxSetup({cache:false});
-		//window.setInterval(function(){$("#time").load("time");},5000);
+		//window.setInterval(function(){$("#time").load("time");},1000);
 		window.setInterval(function(){$.ajax({url:"time",cache:false,success:function(data,status,request){
 			$("#time").html(data);
 		}});},1000);
