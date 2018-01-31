@@ -22,7 +22,7 @@ class Root(object):
 		//window.setInterval(function(){$("#time").load("time");},5000);
 		window.setInterval(function(){$.ajax({url:"time",cache:false,success:function(data,status,request){
 			$("#time").html(data);
-		}});},5000);
+		}});},1000);
 		</script>
 		</body>
 		</html>'''
