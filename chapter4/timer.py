@@ -31,6 +31,12 @@ class Root(object):
 	def time(self,_=None):
 		return asctime()
 
+	#Inserting Host and Port Output
+	cherrypy.config.update({
+                'server.socket_host': '0.0.0.0',
+                'server.socket_port': 8088,
+	})
+
 cherrypy.quickstart(Root(),config={
 		'/jquery.js':
 		{ 'tools.staticfile.on':True,
