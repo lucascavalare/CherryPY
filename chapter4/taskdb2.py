@@ -32,7 +32,8 @@ cursor.execute(sql,('even more work','2010-04-01',None,'john'))
 
 connection.commit()
 
-sql = """select * from task where user_id = 'john'"""
+sql = """select * from task"""
+#sql = """select * from task where user_id = 'john'"""
 cursor.execute(sql)
 tasks = cursor.fetchall()
 for t in tasks:
