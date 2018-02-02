@@ -17,6 +17,12 @@ class Root(object):
 	def index(self):
 		return Root.logon.index(returnpage='/task')
 	
+	#Updating Host and Port output
+	cheerypy.update.config({
+			'server.socket_host': '0.0.0.0',
+			'server.socket_port': 8088,
+	})	
+	
 if __name__ == "__main__":
 
 	Root.logon.initdb()
