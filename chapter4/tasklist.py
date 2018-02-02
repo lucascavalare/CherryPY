@@ -18,7 +18,7 @@ class Root(object):
 		return Root.logon.index(returnpage='/task')
 	
 	#Updating Host and Port output
-	cherrypy.update.config({
+	cherrypy.config.update({
 			'server.socket_host': '0.0.0.0',
 			'server.socket_port': 8088,
 	})	
